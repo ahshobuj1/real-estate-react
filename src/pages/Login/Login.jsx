@@ -50,11 +50,11 @@ const Login = () => {
                         </div>
 
                         <div className="flex justify-between items-center">
-                            <label>
-                                <input type="checkbox" /> Remember me
-                            </label>
+                            <div className="flex items-center">
+                                <input type="checkbox" />
+                                <label>Remember me</label>
+                            </div>
 
-                            <a href="#"></a>
                             <Link to="" className="text-blue-600">
                                 Forget password?
                             </Link>
