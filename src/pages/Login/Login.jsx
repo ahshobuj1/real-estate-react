@@ -1,6 +1,6 @@
 import {Link, useLocation} from 'react-router-dom';
 import './Login.css';
-import {FaAt, FaEyeSlash, FaEye} from 'react-icons/fa';
+import {FaAt, FaEyeSlash, FaEye, FaGoogle, FaFacebook} from 'react-icons/fa';
 import {useContext, useState} from 'react';
 import {AuthContext} from '../../context/UserContext';
 import {ToastContainer, toast} from 'react-toastify';
@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const [show, setShow] = useState(false);
-    const {loginUser} = useContext(AuthContext);
+    const {loginUser, loginWithGoogle} = useContext(AuthContext);
     const location = useLocation();
     console.log(location);
 
@@ -28,10 +28,19 @@ const Login = () => {
             .catch((err) => console.log(err.message));
     };
 
+    const handleGoogleLogin = () => {
+        loginWithGoogle()
+            .then((res) => {
+                console.log('google login', res.user);
+                toast('Login successfully!');
+            })
+            .catch((err) => console.log(err.message));
+    };
+
     return (
         <>
             <div className="hero  bg-[url(src/assets/sign-in-up.jpg)] min-h-screen flex justify-center items-center">
-                <div className="sm:min-w-80  md:w-[400px] h-[450px] p-7 backdrop-blur-[2px] border-2 text-white rounded-md">
+                <div className="sm:min-w-80 md:w-[400px] h-[460px] p-7 backdrop-blur-[3px] border-2 text-white rounded-md">
                     <h2 className="text-2xl text-center font-semibold">
                         Login
                     </h2>
@@ -89,6 +98,16 @@ const Login = () => {
                             Login
                         </button>
                         <ToastContainer />
+
+                        <p>Login with social link! </p>
+                        <div className="flex space-x-8 items-center my-3">
+                            <a onClick={handleGoogleLogin}>
+                                <FaGoogle className="text-3xl p-1 rounded-sm bg-red-500" />
+                            </a>
+                            <a>
+                                <FaFacebook className="text-3xl p-1 rounded-sm bg-red-500" />
+                            </a>
+                        </div>
 
                         <p>
                             Do not have an account!{' '}

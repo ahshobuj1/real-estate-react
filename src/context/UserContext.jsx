@@ -3,12 +3,15 @@ import PropTypes from 'prop-types';
 import auth from '../firebase/firebase.config';
 import {
     createUserWithEmailAndPassword,
+    GoogleAuthProvider,
     onAuthStateChanged,
     signInWithEmailAndPassword,
+    signInWithPopup,
     signOut,
 } from 'firebase/auth';
 
 export const AuthContext = createContext();
+const provider = new GoogleAuthProvider();
 
 const UserContext = ({children}) => {
     const [user, setUser] = useState('');
@@ -24,6 +27,11 @@ const UserContext = ({children}) => {
     const loginUser = (email, password) => {
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
+    };
+
+    // Login with Google social link
+    const loginWithGoogle = () => {
+        return signInWithPopup(auth, provider);
     };
 
     // Logout user
@@ -48,7 +56,14 @@ const UserContext = ({children}) => {
         return () => unsubscribe();
     }, []);
 
-    const authInfo = {createUser, loginUser, logOutUser, user, loading};
+    const authInfo = {
+        createUser,
+        loginUser,
+        logOutUser,
+        user,
+        loading,
+        loginWithGoogle,
+    };
 
     return (
         <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
