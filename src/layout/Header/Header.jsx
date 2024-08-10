@@ -1,10 +1,10 @@
-import Navbar from '../Navbar/Navbar';
+import Slide from '../../components/Slide';
 
 const Header = () => {
     return (
-        <>
-            <Navbar />
-        </>
+        <section>
+            <Slide />
+        </section>
     );
 };
 
