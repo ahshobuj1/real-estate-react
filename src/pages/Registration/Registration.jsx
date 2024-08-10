@@ -1,7 +1,11 @@
 import {Link} from 'react-router-dom';
 import {FaAt, FaKey, FaRegUser} from 'react-icons/fa';
+import {useContext} from 'react';
+import {AuthContext} from '../../context/UserContext';
 
 const Registration = () => {
+    const {createUser} = useContext(AuthContext);
+
     //get input value
     const handleFormValue = (e) => {
         e.preventDefault();
@@ -9,6 +13,13 @@ const Registration = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(username, email, password);
+
+        createUser(email, password)
+            .then((res) => {
+                console.log('created user', res.user);
+                e.target.reset();
+            })
+            .catch((err) => console.log(err.message));
     };
 
     return (

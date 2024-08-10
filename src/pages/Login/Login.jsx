@@ -1,10 +1,12 @@
 import {Link} from 'react-router-dom';
 import './Login.css';
 import {FaAt, FaEyeSlash, FaEye} from 'react-icons/fa';
-import {useState} from 'react';
+import {useContext, useState} from 'react';
+import {AuthContext} from '../../context/UserContext';
 
 const Login = () => {
     const [show, setShow] = useState(false);
+    const {loginUser} = useContext(AuthContext);
 
     //get input value
     const handleFormValue = (e) => {
@@ -12,6 +14,13 @@ const Login = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(email, password);
+
+        loginUser(email, password)
+            .then((res) => {
+                console.log('Login user ', res.user);
+                e.target.reset();
+            })
+            .catch((err) => console.log(err.message));
     };
 
     return (
