@@ -1,12 +1,16 @@
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 import './Login.css';
 import {FaAt, FaEyeSlash, FaEye} from 'react-icons/fa';
 import {useContext, useState} from 'react';
 import {AuthContext} from '../../context/UserContext';
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const [show, setShow] = useState(false);
     const {loginUser} = useContext(AuthContext);
+    const location = useLocation();
+    console.log(location);
 
     //get input value
     const handleFormValue = (e) => {
@@ -19,6 +23,7 @@ const Login = () => {
             .then((res) => {
                 console.log('Login user ', res.user);
                 e.target.reset();
+                toast('Login successfully!');
             })
             .catch((err) => console.log(err.message));
     };
@@ -83,6 +88,7 @@ const Login = () => {
                             className="btn bg-cyan-500 w-full my-4 border-0 font-semibold text-black">
                             Login
                         </button>
+                        <ToastContainer />
 
                         <p>
                             Do not have an account!{' '}

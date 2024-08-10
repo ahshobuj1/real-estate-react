@@ -1,10 +1,13 @@
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import {FaAt, FaKey, FaRegUser} from 'react-icons/fa';
 import {useContext} from 'react';
 import {AuthContext} from '../../context/UserContext';
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Registration = () => {
     const {createUser} = useContext(AuthContext);
+    const navigate = useNavigate();
 
     //get input value
     const handleFormValue = (e) => {
@@ -18,6 +21,8 @@ const Registration = () => {
             .then((res) => {
                 console.log('created user', res.user);
                 e.target.reset();
+                toast('Account is created successfully!');
+                navigate('/');
             })
             .catch((err) => console.log(err.message));
     };
@@ -91,6 +96,7 @@ const Registration = () => {
                             className="btn bg-cyan-500 w-full my-4 border-0 font-semibold text-black">
                             Registration
                         </button>
+                        <ToastContainer />
 
                         <p>
                             Already have an account!{' '}
