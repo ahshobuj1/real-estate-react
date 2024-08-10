@@ -2,20 +2,30 @@ import {Link} from 'react-router-dom';
 import {FaAt, FaKey, FaRegUser} from 'react-icons/fa';
 
 const Registration = () => {
+    //get input value
+    const handleFormValue = (e) => {
+        e.preventDefault();
+        const username = e.target.username.value;
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        console.log(username, email, password);
+    };
+
     return (
         <>
             <div className="hero  bg-[url(src/assets/sign-in-up.jpg)] min-h-screen flex justify-center items-center">
-                <div className="sm:min-w-80  md:w-[400px] h-[450px] p-7 backdrop-blur-[2px] border-2 text-white rounded-md">
+                <div className="sm:min-w-80  md:w-[400px] h-[470px] p-7 backdrop-blur-[2px] border-2 text-white rounded-md">
                     <h2 className="text-2xl text-center font-semibold">
                         Registration
                     </h2>
 
-                    <form>
+                    <form onSubmit={handleFormValue}>
                         <div className="relative w-full h-12 border-b-2 border-b-slate-100 my-7">
                             <span className="absolute top-5 right-0">
                                 <FaRegUser />
                             </span>
                             <input
+                                name="username"
                                 type="text"
                                 required
                                 className="w-full h-full text-white text-xl border-0 outline-0 bg-transparent cursor-text px-5 focus"
@@ -32,6 +42,7 @@ const Registration = () => {
                                 <FaAt />
                             </span>
                             <input
+                                name="email"
                                 type="email"
                                 required
                                 className="w-full h-full text-white text-xl border-0 outline-0 bg-transparent cursor-text px-5 focus"
@@ -48,6 +59,7 @@ const Registration = () => {
                                 <FaKey />
                             </span>
                             <input
+                                name="password"
                                 type="text"
                                 required
                                 className="w-full h-full text-white text-xl border-0 outline-0 bg-transparent cursor-text px-5 focus"
@@ -70,11 +82,10 @@ const Registration = () => {
                         </button>
 
                         <p>
-                            Already have an account!
+                            Already have an account!{' '}
                             <Link
                                 to="/login"
                                 className="text-blue-600 font-medium">
-                                {' '}
                                 Login
                             </Link>
                         </p>

@@ -6,6 +6,14 @@ import {useState} from 'react';
 const Login = () => {
     const [show, setShow] = useState(false);
 
+    //get input value
+    const handleFormValue = (e) => {
+        e.preventDefault();
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        console.log(email, password);
+    };
+
     return (
         <>
             <div className="hero  bg-[url(src/assets/sign-in-up.jpg)] min-h-screen flex justify-center items-center">
@@ -14,12 +22,13 @@ const Login = () => {
                         Login
                     </h2>
 
-                    <form>
+                    <form onSubmit={handleFormValue}>
                         <div className="relative w-full h-12 border-b-2 border-b-slate-100 my-7">
                             <span className="absolute top-5 right-0">
                                 <FaAt />
                             </span>
                             <input
+                                name="email"
                                 type="email"
                                 required
                                 className="w-full h-full text-white text-xl border-0 outline-0 bg-transparent cursor-text px-5 focus"
@@ -38,6 +47,7 @@ const Login = () => {
                                 {show ? <FaEyeSlash /> : <FaEye />}
                             </span>
                             <input
+                                name="password"
                                 type={show ? 'text' : 'password'}
                                 required
                                 className="w-full h-full text-white text-xl border-0 outline-0 bg-transparent cursor-text px-5 focus"
@@ -66,11 +76,10 @@ const Login = () => {
                         </button>
 
                         <p>
-                            Do not have an account!
+                            Do not have an account!{' '}
                             <Link
                                 to="/registration"
                                 className="text-blue-600 font-medium">
-                                {' '}
                                 Register
                             </Link>
                         </p>
