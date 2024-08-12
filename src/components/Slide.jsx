@@ -27,7 +27,10 @@ const Slide = () => {
                         </button>
                     </div>
 
-                    <img src="public/assets/slide1.jpg" className="w-full " />
+                    <img
+                        src="/src/assets/images/slide1.jpg"
+                        className="w-full "
+                    />
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                         <a href="#slide3" className="btn btn-sm btn-circle">
                             ❮
@@ -63,7 +66,10 @@ const Slide = () => {
                         </button>
                     </div>
 
-                    <img src="public/assets/slide2.jpg" className="w-full " />
+                    <img
+                        src="src/assets/images/slide2.jpg"
+                        className="w-full "
+                    />
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                         <a href="#slide1" className="btn btn-sm btn-circle">
                             ❮
@@ -98,7 +104,10 @@ const Slide = () => {
                         </button>
                     </div>
 
-                    <img src="public/assets/slide3.jpg" className="w-full " />
+                    <img
+                        src="src/assets/images/slide3.jpg"
+                        className="w-full "
+                    />
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                         <a href="#slide2" className="btn btn-sm btn-circle">
                             ❮

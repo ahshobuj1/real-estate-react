@@ -17,7 +17,7 @@ const About = () => {
                 <div>
                     <div>
                         <img
-                            src="public/assets/massage.jpg"
+                            src="src/assets/images/massage.jpg"
                             alt="about img"
                             className="rounded-md my-5"
                         />
@@ -33,7 +33,7 @@ const About = () => {
                 <div>
                     <div>
                         <img
-                            src="public/assets/beauty.jpg"
+                            src="src/assets/images/beauty.jpg"
                             alt="about img"
                             className="rounded-md my-5"
                         />
@@ -49,7 +49,7 @@ const About = () => {
                 <div>
                     <div>
                         <img
-                            src="public/assets/yoga.jpg"
+                            src="src/assets/images/yoga.jpg"
                             alt="about img"
                             className="rounded-md my-5"
                         />
