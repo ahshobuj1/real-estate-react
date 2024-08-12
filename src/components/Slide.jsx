@@ -1,3 +1,7 @@
+import slide1 from '../assets/images/slide1.jpg';
+import slide2 from '../assets/images/slide2.jpg';
+import slide3 from '../assets/images/slide3.jpg';
+
 const Slide = () => {
     return (
         <div>
@@ -16,21 +20,18 @@ const Slide = () => {
                                 ENGLISH & SPANISH
                             </span>
                         </p>
-                        <p className="text-black">
+                        <p className="text-black hidden md:block">
                             Join our community to get Updates and Special
                             Offers. You can unsubscribe at any time (we can
                             still be friends)
                         </p>
 
-                        <button className="btn btn-sm btn-neutral">
+                        <button className="btn btn-sm btn-neutral hidden md:block">
                             CLASSES SCHEDULE
                         </button>
                     </div>
 
-                    <img
-                        src="/src/assets/images/slide1.jpg"
-                        className="w-full "
-                    />
+                    <img src={slide1} className="w-full " />
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                         <a href="#slide3" className="btn btn-sm btn-circle">
                             ❮
@@ -55,21 +56,18 @@ const Slide = () => {
                                 ENGLISH & SPANISH
                             </span>
                         </p>
-                        <p className="text-black">
+                        <p className="text-black hidden md:block">
                             Join our community to get Updates and Special
                             Offers. You can unsubscribe at any time (we can
                             still be friends)
                         </p>
 
-                        <button className="btn btn-sm btn-neutral">
+                        <button className="btn btn-sm btn-neutral hidden md:block">
                             CLASSES SCHEDULE
                         </button>
                     </div>
 
-                    <img
-                        src="src/assets/images/slide2.jpg"
-                        className="w-full "
-                    />
+                    <img src={slide2} className="w-full " />
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                         <a href="#slide1" className="btn btn-sm btn-circle">
                             ❮
@@ -93,21 +91,18 @@ const Slide = () => {
                                 ENGLISH & SPANISH
                             </span>
                         </p>
-                        <p className="text-black">
+                        <p className="text-black hidden md:block">
                             Join our community to get Updates and Special
                             Offers. You can unsubscribe at any time (we can
                             still be friends)
                         </p>
 
-                        <button className="btn btn-sm btn-neutral">
+                        <button className="btn btn-sm btn-neutral hidden md:block">
                             CLASSES SCHEDULE
                         </button>
                     </div>
 
-                    <img
-                        src="src/assets/images/slide3.jpg"
-                        className="w-full "
-                    />
+                    <img src={slide3} className="w-full " />
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                         <a href="#slide2" className="btn btn-sm btn-circle">
                             ❮

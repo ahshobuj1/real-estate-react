@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Classic Facial",
+        "duration": "60 minutes",
+        "price": "$70"
+    },
+    {
+        "name": "Hydrating Facial",
+        "duration": "75 minutes",
+        "price": "$90"
+    },
+    {
+        "name": "Anti-Aging Facial",
+        "duration": "90 minutes",
+        "price": "$110"
+    },
+    {
+        "name": "Eyebrow Shaping",
+        "duration": "20 minutes",
+        "price": "$25"
+    },
+    {
+        "name": "Eyebrow Tinting",
+        "duration": "25 minutes",
+        "price": "$30"
+    },
+    {
+        "name": "Eyelash Extensions",
+        "duration": "120 minutes",
+        "price": "$150"
+    },
+    {
+        "name": "Classic Manicure",
+        "duration": "40 minutes",
+        "price": "$45"
+    }
+]

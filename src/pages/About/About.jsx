@@ -1,7 +1,12 @@
+import urlMassage from '../../assets/images/massage.jpg';
+import urlBeauty from '../../assets/images/beauty.jpg';
+import urlYoga from '../../assets/images/yoga.jpg';
+import QNA from '../../components/QNA';
+
 const About = () => {
     return (
         <section>
-            <div className="text-center my-10 space-y-5">
+            <div className="px-2 lg:px-0 text-center my-10 space-y-5">
                 <h1 className="text-4xl font-medium">Welcome</h1>
                 <p className="max-w-2xl mx-auto">
                     Calm & Cozy Corner started as an ambitious idea to promoting
@@ -13,11 +18,11 @@ const About = () => {
                 </p>
             </div>
 
-            <div className="flex gap-6">
+            <div className="px-2 lg:px-0 md:flex gap-6">
                 <div>
                     <div>
                         <img
-                            src="src/assets/images/massage.jpg"
+                            src={urlMassage}
                             alt="about img"
                             className="rounded-md my-5"
                         />
@@ -33,7 +38,7 @@ const About = () => {
                 <div>
                     <div>
                         <img
-                            src="src/assets/images/beauty.jpg"
+                            src={urlBeauty}
                             alt="about img"
                             className="rounded-md my-5"
                         />
@@ -49,7 +54,7 @@ const About = () => {
                 <div>
                     <div>
                         <img
-                            src="src/assets/images/yoga.jpg"
+                            src={urlYoga}
                             alt="about img"
                             className="rounded-md my-5"
                         />
@@ -63,6 +68,8 @@ const About = () => {
                     </p>
                 </div>
             </div>
+
+            <QNA />
         </section>
     );
 };

@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Swedish Massage",
+        "duration": "30 minutes",
+        "price": "$50"
+    },
+    {
+        "name": "Deep Tissue Massage",
+        "duration": "60 minutes",
+        "price": "$100"
+    },
+    {
+        "name": "Facial Treatment",
+        "duration": "60 minutes",
+        "price": "$80"
+    },
+    {
+        "name": "Body Scrub",
+        "duration": "45 minutes",
+        "price": "$70"
+    },
+    {
+        "name": "Manicure",
+        "duration": "30 minutes",
+        "price": "$40"
+    },
+    {
+        "name": "Pedicure",
+        "duration": "45 minutes",
+        "price": "$50"
+    },
+    {
+        "name": "Couples Massage",
+        "duration": "60 minutes",
+        "price": "$180"
+    }
+]

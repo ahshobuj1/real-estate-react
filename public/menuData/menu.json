@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Swedish Massage",
+        "category": "Spa",
+        "price": "$50",
+        "img": "../../src/assets/images/menu8.jpg",
+        "description": "A relaxing full-body massage. Perfect for easing muscle tension and stress."
+    },
+    {
+        "name": "Deep Tissue Massage",
+        "category": "Spa",
+        "price": "$60",
+        "img": "../../src/assets/images/woman-3141766_640.jpg",
+        "description": "Focuses on deeper layers of muscle tissue. Ideal for chronic pain and muscle stress."
+    },
+    {
+        "name": "Facial Treatment",
+        "category": "Spa",
+        "price": "$80",
+        "img": "../../src/assets/images/menu3.jpg",
+        "description": "Revitalize your skin with a cleansing and hydrating facial."
+    },
+    {
+        "name": "Body Scrub",
+        "category": "Spa",
+        "price": "$70",
+        "img": "../../src/assets/images/menu4.jpg",
+        "description": "Exfoliate and refresh your skin with a soothing body scrub."
+    },
+    {
+        "name": "Single Drop-In Class",
+        "category": "Yoga",
+        "price": "$20",
+        "img": "../../src/assets/images/menu5.jpg",
+        "description": "Join a single class for a refreshing yoga session."
+    },
+    {
+        "name": "10-Class Package",
+        "category": "Yoga",
+        "price": "$180",
+        "img": "../../src/assets/images/menu6.jpg",
+        "description": "Save with a package of ten yoga classes."
+    },
+    {
+        "name": "Classic Facial",
+        "category": "Beauty",
+        "price": "$70",
+        "img": "../../src/assets/images/woman-3141766_640.jpg",
+        "description": "A standard facial treatment for fresh, glowing skin."
+    },
+    {
+        "name": "Eyelash Extensions",
+        "category": "Beauty",
+        "price": "$150",
+        "img": "../../src/assets/images/menu7.jpg",
+        "description": "Enhance your eyes with beautiful, long-lasting eyelash extensions."
+    },
+    {
+        "name": "Gel Manicure",
+        "category": "Beauty",
+        "price": "$55",
+        "img": "../../src/assets/images/menu8.jpg",
+        "description": "Long-lasting gel polish for a perfect manicure."
+    }
+]

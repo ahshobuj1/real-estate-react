@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Single Drop-In Class",
+        "duration": "60 minutes",
+        "price": "$20"
+    },
+    {
+        "name": "Single Drop-In Class (Hot Yoga)",
+        "duration": "75 minutes",
+        "price": "$25"
+    },
+    {
+        "name": "10-Class Package",
+        "duration": "Varies",
+        "price": "$180"
+    },
+    {
+        "name": "20-Class Package",
+        "duration": "Varies",
+        "price": "$340"
+    },
+    {
+        "name": "Monthly Unlimited Membership",
+        "duration": "30 days",
+        "price": "$150"
+    },
+    {
+        "name": "Private Yoga Session",
+        "duration": "60 minutes",
+        "price": "$70"
+    },
+    {
+        "name": "Private Yoga Session (Couples)",
+        "duration": "60 minutes",
+        "price": "$100"
+    }
+]
