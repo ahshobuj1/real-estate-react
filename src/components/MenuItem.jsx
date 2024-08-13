@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'; // ES6
+
 const MenuItem = ({item}) => {
     const {name, category, price, img, description} = item;
 
@@ -18,3 +20,7 @@ const MenuItem = ({item}) => {
 };
 
 export default MenuItem;
+
+MenuItem.propTypes = {
+    item: PropTypes.object,
+};

@@ -1,5 +1,7 @@
+import PropTypes from 'prop-types'; // ES6
+
 const Team = ({member}) => {
-    const {name, id, role, email, specialization, workExperience, img} = member;
+    const {name, role, email, specialization, workExperience, img} = member;
     return (
         <div className="shadow-lg rounded-md hover:shadow-2xl">
             <div>
@@ -28,3 +30,7 @@ const Team = ({member}) => {
 };
 
 export default Team;
+
+Team.propTypes = {
+    member: PropTypes.object,
+};
