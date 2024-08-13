@@ -4,6 +4,8 @@ import {useContext} from 'react';
 import {AuthContext} from '../../context/UserContext';
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import {updateProfile} from 'firebase/auth';
+import auth from '../../firebase/firebase.config';
 
 const Registration = () => {
     const {createUser} = useContext(AuthContext);
@@ -24,6 +26,13 @@ const Registration = () => {
                 e.target.reset();
                 toast('Account is created successfully!');
                 navigate('/');
+
+                updateProfile(auth.currentUser, {
+                    displayName: username,
+                    photoURL: file,
+                })
+                    .then(() => console.log('successful '))
+                    .catch((err) => console.log(err.message));
             })
             .catch((err) => console.log(err.message));
     };

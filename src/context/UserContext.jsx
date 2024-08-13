@@ -23,6 +23,14 @@ const UserContext = ({children}) => {
         return createUserWithEmailAndPassword(auth, email, password);
     };
 
+    //update user
+    /*  const updateUserInfo = (file, username) => {
+        updateProfile(auth.currentUser, {
+            displayName: username,
+            photoURL: file,
+        });
+    }; */
+
     // Login user with email password
     const loginUser = (email, password) => {
         setLoading(true);
