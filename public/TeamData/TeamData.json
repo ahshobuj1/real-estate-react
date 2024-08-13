@@ -1,0 +1,29 @@
+[
+    {
+        "id": "1",
+        "name": "Alice ",
+        "role": "Spa Therapist",
+        "email": "alice.johnson@example.com",
+        "specialization": "Deep Tissue Massage",
+        "img": "src/assets/images/team1.jpg",
+        "workExperience": "5 years at Serenity Spa, specializing in deep tissue and sports massage"
+    },
+    {
+        "id": "2",
+        "name": "Bob Smith",
+        "role": "Yoga Instructor",
+        "email": "bob.smith@example.com",
+        "specialization": "Vinyasa Yoga",
+        "img": "src/assets/images/team4.jpg",
+        "workExperience": "8 years teaching Vinyasa and Hatha Yoga at Yoga Haven"
+    },
+    {
+        "id": "3",
+        "name": "Carla Davis",
+        "role": "Beauty Specialist",
+        "email": "carla.davis@example.com",
+        "specialization": "Skincare Treatments",
+        "img": "src/assets/images/team3.jpg",
+        "workExperience": "10 years in the beauty industry with a focus on advanced skincare and facial treatments"
+    }
+]
