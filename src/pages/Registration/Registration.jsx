@@ -15,7 +15,8 @@ const Registration = () => {
         const username = e.target.username.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log(username, email, password);
+        const file = e.target.file.value;
+        console.log(username, email, password, file);
 
         createUser(email, password)
             .then((res) => {
@@ -30,12 +31,21 @@ const Registration = () => {
     return (
         <>
             <div className="hero bg-[url('src/assets/images/bg-account.jpg')] min-h-screen flex justify-center items-center">
-                <div className="sm:min-w-80  md:w-[400px] h-[470px] p-7 backdrop-blur-[2px] border-2 text-white rounded-md">
+                <div className="sm:min-w-80  md:w-[400px] p-7 backdrop-blur-[2px] border-2 text-white rounded-md">
                     <h2 className="text-2xl text-center font-semibold">
                         Registration
                     </h2>
 
                     <form onSubmit={handleFormValue}>
+                        <div className="relative w-full h-12 border-b-slate-100 my-7">
+                            <input
+                                name="file"
+                                required
+                                type="file"
+                                className="file-input file-input-bordered  file-input-primary w-full text-black "
+                            />
+                        </div>
+
                         <div className="relative w-full h-12 border-b-2 border-b-slate-100 my-7">
                             <span className="absolute top-5 right-0">
                                 <FaRegUser />
