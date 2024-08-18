@@ -11,6 +11,8 @@ import Discount from '../components/Discount';
 import Teams from '../components/TeamMember/Teams';
 import Reservation from '../pages/Reservation/Reservation';
 import ProtectedRoute from './ProtectedRoute';
+import Premium from '../pages/Premium/Premium';
+import Class from '../components/Class';
 
 const router = createBrowserRouter([
     {
@@ -37,11 +39,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/services',
-                element: (
-                    <ProtectedRoute>
-                        <Services />
-                    </ProtectedRoute>
-                ),
+                element: <Services />,
             },
             {
                 path: '/blog',
@@ -57,9 +55,21 @@ const router = createBrowserRouter([
             },
             {
                 path: '/reservation',
+                element: <Reservation />,
+            },
+            {
+                path: '/premium',
                 element: (
                     <ProtectedRoute>
-                        <Reservation />
+                        <Premium />
+                    </ProtectedRoute>
+                ),
+            },
+            {
+                path: '/class',
+                element: (
+                    <ProtectedRoute>
+                        <Class />
                     </ProtectedRoute>
                 ),
             },

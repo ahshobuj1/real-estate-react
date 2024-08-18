@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 import slide1 from '../assets/images/slide1.jpg';
 import slide2 from '../assets/images/slide2.jpg';
 import slide3 from '../assets/images/slide3.jpg';
@@ -26,9 +27,11 @@ const Slide = () => {
                             still be friends)
                         </p>
 
-                        <button className="btn btn-sm btn-neutral hidden md:block">
-                            CLASSES SCHEDULE
-                        </button>
+                        <Link to="/class">
+                            <button className="btn btn-sm btn-neutral hidden md:block">
+                                CLASSES SCHEDULE
+                            </button>
+                        </Link>
                     </div>
 
                     <img src={slide1} className="w-full " />
@@ -62,9 +65,11 @@ const Slide = () => {
                             still be friends)
                         </p>
 
-                        <button className="btn btn-sm btn-neutral hidden md:block">
-                            CLASSES SCHEDULE
-                        </button>
+                        <Link to="/class">
+                            <button className="btn btn-sm btn-neutral hidden md:block">
+                                CLASSES SCHEDULE
+                            </button>
+                        </Link>
                     </div>
 
                     <img src={slide2} className="w-full " />
@@ -97,9 +102,11 @@ const Slide = () => {
                             still be friends)
                         </p>
 
-                        <button className="btn btn-sm btn-neutral hidden md:block">
-                            CLASSES SCHEDULE
-                        </button>
+                        <Link to="/class">
+                            <button className="btn btn-sm btn-neutral hidden md:block">
+                                CLASSES SCHEDULE
+                            </button>
+                        </Link>
                     </div>
 
                     <img src={slide3} className="w-full " />
