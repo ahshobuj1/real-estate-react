@@ -39,7 +39,7 @@ const Registration = () => {
 
     return (
         <>
-            <div className="hero bg-[url('src/assets/images/bg-account.jpg')] min-h-screen flex justify-center items-center">
+            <div className="hero bg-[url('https://i.postimg.cc/Z5wh8yHq/bg-account.jpg')] min-h-screen flex justify-center items-center">
                 <div className="sm:min-w-80  md:w-[400px] p-7 backdrop-blur-[2px] border-2 text-white rounded-md">
                     <h2 className="text-2xl text-center font-semibold">
                         Registration

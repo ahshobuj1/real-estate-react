@@ -4,7 +4,7 @@ import MenuItem from './MenuItem';
 const RecentMenu = () => {
     const [menu, setMenu] = useState([]);
 
-    fetch('/public/menuData/menu.json')
+    fetch('menuData/menu.json')
         .then((res) => res.json())
         .then((data) => setMenu(data))
         .catch((err) => console.log(err));

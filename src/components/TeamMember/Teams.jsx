@@ -1,15 +1,13 @@
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 import Team from './Team';
 
 const Teams = () => {
     const [members, setMembers] = useState([]);
 
-    useEffect(() => {
-        fetch('/public/TeamData/TeamData.json')
-            .then((res) => res.json())
-            .then((data) => setMembers(data))
-            .catch((err) => console.log(err));
-    }, []);
+    fetch('TeamData/TeamData.json')
+        .then((res) => res.json())
+        .then((data) => setMembers(data))
+        .catch((err) => console.log(err));
 
     return (
         <section className="my-10 px-2 lg:px-0">

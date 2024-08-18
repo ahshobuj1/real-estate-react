@@ -10,6 +10,7 @@ import Blogs from '../pages/Blog/Blogs';
 import Discount from '../components/Discount';
 import Teams from '../components/TeamMember/Teams';
 import Reservation from '../pages/Reservation/Reservation';
+import ProtectedRoute from './ProtectedRoute';
 
 const router = createBrowserRouter([
     {
@@ -36,7 +37,11 @@ const router = createBrowserRouter([
             },
             {
                 path: '/services',
-                element: <Services />,
+                element: (
+                    <ProtectedRoute>
+                        <Services />
+                    </ProtectedRoute>
+                ),
             },
             {
                 path: '/blog',
@@ -52,7 +57,11 @@ const router = createBrowserRouter([
             },
             {
                 path: '/reservation',
-                element: <Reservation />,
+                element: (
+                    <ProtectedRoute>
+                        <Reservation />
+                    </ProtectedRoute>
+                ),
             },
         ],
     },

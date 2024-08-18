@@ -4,7 +4,7 @@ import Blog from './Blog';
 const Blogs = () => {
     const [blogs, setBlogs] = useState([]);
     useEffect(() => {
-        fetch('/public/BlogData/BlogData.json')
+        fetch('BlogData/BlogData.json')
             .then((res) => res.json())
             .then((data) => setBlogs(data))
             .catch((err) => console.log(err));

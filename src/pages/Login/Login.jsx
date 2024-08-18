@@ -1,4 +1,4 @@
-import {Link, useLocation} from 'react-router-dom';
+import {Link, useLocation, useNavigate} from 'react-router-dom';
 import './Login.css';
 import {FaAt, FaEyeSlash, FaEye, FaGoogle, FaFacebook} from 'react-icons/fa';
 import {useContext, useState} from 'react';
@@ -10,6 +10,7 @@ const Login = () => {
     const [show, setShow] = useState(false);
     const {loginUser, loginWithGoogle} = useContext(AuthContext);
     const location = useLocation();
+    const navigate = useNavigate();
     console.log(location);
 
     //get input value
@@ -23,7 +24,8 @@ const Login = () => {
             .then((res) => {
                 console.log('Login user ', res.user);
                 e.target.reset();
-                toast('Login successfully!');
+
+                navigate(location.state ? location.state : '/');
             })
             .catch((err) => console.log(err.message));
     };
@@ -33,13 +35,14 @@ const Login = () => {
             .then((res) => {
                 console.log('google login', res.user);
                 toast('Login successfully!');
+                navigate(location.state ? location.state : '/');
             })
             .catch((err) => console.log(err.message));
     };
 
     return (
         <>
-            <div className="hero bg-[url('src/assets/images/bg-account.jpg')] min-h-screen flex justify-center items-center">
+            <div className="hero bg-[url('https://i.postimg.cc/Z5wh8yHq/bg-account.jpg')] min-h-screen flex justify-center items-center">
                 <div className="sm:min-w-80 md:w-[400px] h-[460px] p-7 backdrop-blur-[3px] border-2 text-white rounded-md">
                     <h2 className="text-2xl text-center font-semibold">
                         Login
